@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Research Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ローディング画面 -->
+  <div class="loader-wrapper" id="loader">
+    <div class="loader"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- サイト本体 -->
+  <div class="content" style="display:none;">
+
+     <div id="wrap">
+
+        <header class="header">
+            <input type="checkbox" id="navBtn">
+
+            <!-- ヘッダーロゴ -->
+            <div class="header-inner">
+                <a class="header-logo" href="./index.html">
+                   <img src="images/museum_transparent.png" alt="アンビグラム1"><!--width=""  height=""　-->
+                </a>
+                <button class="toggle-menu-button"></button>
+            </div>
+
+            <div class="border-radius"></div>
+
+
+            <!-- ハンバーガーメニュー部分 -->
+            <div class="nav">
+
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+                <!-- ハンバーガーアイコン -->
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+
+                <!-- メニュー -->
+                    <nav class="nav_content"> 
+ 			                <ul>
+                        <li class="nav_item"><a href="#about">アンビグラムについて</a></li>
+
+                        <!-- 作品紹介にサブメニューを追加 -->
+                        <li class="nav_item has-submenu">
+                            <a href="#artworks">作品紹介</a>
+                            <!-- モバイルで開閉するためのボタン -->
+                            <button class="submenu-toggle" aria-expanded="false" aria-label="サブメニューを開く"></button>
+                            <ul class="submenu">
+                              <li><a href="#art1">ソーシャルデザイン</a></li>
+                              <li><a href="#art2">明星</a></li>
+                              <li><a href="#art3">芸術</a></li>
+                            </ul>
+                        </li>
+
+                        <!--<li class="nav_item"><a href="#create">パターン紹介</a></li>-->
+                        <li class="nav_item"><a href="#contact">参考にしたサイト</a></li>
+                      </ul>
+                    </nav>
+            </div>
+        </header>
+
+          <div class="bg-img"></div>
+              <main>
+                  <br></br>
+                  <div class="center-img">
+                    <img src="images/museum_transparent.png">
+                  </div>
+
+                <section id="about" class="sec01">
+                  <p>
+                  <h1>アンビグラムってなに？</h1>
+                  <br>アンビグラムとは、文字を回転させたり、鏡に映したりしても、
+                  <br>特定の言葉に読めるようにデザインされた文字のことです。
+                  <p>
+                  <br>日頃生活している中で目にしたことがあるかもしれません。
+                  <br>
+                  <br>例えば日清のロゴ。画像にカーソルを合わせてください。
+                     <div class="expansion">
+                         <div class="rotate1">
+                             <img src="images/NISSIN.gif" alt="画像">
+                         </div>
+                     </div>
+                <br>このサイトでは画像にカーソルを合わせると回転するようになっています。
+                <br>
+                <br>このようなアンビグラムを日常の中で探してみてください！
+                <br>
+                <br>
+            </section>
+
+            <section id="artworks" class="sec02">
+                <h1>ArtWorks</h1>
+                <p>
+                    <h2>『ソーシャルデザイン』</h2>
+                    <br>180度回転体アンビグラム
+                      <div class="expansion">
+                          <div class="rotate7">
+                             <img src="images/Social_Design.jpg" alt="画像">
+                          </div>
+                      </div>
+
+                    <h2>『明星』</h2>
+                    <br>90度回転体アンビグラム
+                      <div class="expansion">
+                          <div class="rotate2">
+                             <img src="images/Morning_Star.jpg" alt="画像">
+                          </div>
+                      </div>
+
+                      <h2>『芸術』</h2>
+                      <br>旋回型アンビグラム
+                        <div class="expansion">
+                          <div class="rotate3">
+                             <img src="images/Art.jpg" alt="画像">
+                          </div>
+                      </div>
+
+                      <h2>『以心伝心』</h2>
+                      <br>同一型アンビグラム
+                        <div class="rotate4">
+                          <img src="images/Telepathy.jpg" alt="画像">
+                        </div>
+
+                      <h2>『半分』</h2>
+                      <br>地反転型アンビグラム</br>
+                        <div class="rotate5">
+                          <img src="images/地反転型アンビグラム「反転」.jpg" alt="画像">
+                        </div>
+
+                      <h2>『黄昏の最果て』</h2>
+                      <br>180度回転体アンビグラム
+                        <div class="expansion">
+                          <div class="rotate6">
+                             <img src="images/Twilight_end.jpg" alt="画像">
+                          </div>
+                      </div>
+
+                    <h2>『夕やけ赤のちオレンジ』</h2>
+                    <br>90度回転体アンビグラム
+                      <div class="expansion">
+                          <div class="rotate8">
+                             <img src="images/Orenge_Red.jpg" alt="画像">
+                          </div>
+                      </div>
+
+                    <h2>『キャラメル&チャルメラ』</h2>
+                    <br>旋回型アンビグラム
+                      <div class="expansion">
+                          <div class="rotate9">
+                             <a href="#"><img src="images/Caramel&Charamel.jpg" alt="画像"></a>
+                          </div>
+                      </div>
+                      <p>
+            </section>
+
+            <section id="create" class="sec03">
+                <!--<h1>Creation</h1>
+                <br></br>
+                <div class="mesh">
+                    <h2>アンビグラムの制作方法</h2>
+                    <br>製作中...
+                    <br>
+                    <br>
+                    <br>-->
+            </section>
+
+            <section id="contact" class="sec04">
+                <h1>Contact</h1>
+                <br>[参考にしたサイト]</br>
+                <p class="text_link">
+                  <a href="https://posfie.com/@912_sigma/p/y34HMm5" target="_blank" rel="nofollow">・Σ|POTEFU</a>
+                </p>
+                <p class="text_link">
+                  <a href="https://2969.hatenablog.com/entry/2018/01/15/233744" target="_blank" rel="nofollow">・アンビグラムの作り方</a>
+                </p>
+                <p class="text_link">
+                  <a href="https://monthly-ambigram.tumblr.com" target="_blank" rel="nofollow">・月刊『アンビグラム』</a>
+                </p>
+                <br>
+                <br>
+                <br>
+            </section>
+          
+        <footer>
+            <p>© My Site </p>
+        </footer>
+         <a href="#" class="pagetop">▲</a>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 0.8s ease';
+        setTimeout(() => {
+          loader.style.display = 'none';
+          document.querySelector('.content').style.display = 'block';
+        }, 800);
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

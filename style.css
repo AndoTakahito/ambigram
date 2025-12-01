@@ -1,0 +1,707 @@
+/* ローディング用フルスクリーンラッパー */
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+
+  /* --- サブメニュー関連 --- */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* 回転スピナー */
+.loader {
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top: 6px solid #ffffff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+/* 回転アニメーション */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* 読み込みテキスト */
+.loader-wrapper p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/*背景アニメーション*/
+
+/*body*/
+/*___________________________________________________________________________________________________*/
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  height: 100%;
+  background-color: #333;
+  /*background-image: url("images/bg_mesh3.jpg");*/
+  background-size: (1,1s);
+  background-repeat: repeat;
+ /* overflow: hidden; */
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* main contents */
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.center-img {
+  width: 1000px;
+  height: 300px;
+  margin: 300px auto;
+  animation: fadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+/*フォント*/
+/*___________________________________________________________________________________________________*/
+h2 {
+    font-family: "YuGothic","Yu Gothic","Meiryo","ヒラギノ角ゴ","sans-serif";
+}
+
+.text_link a {
+  position: relative;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.text_link a::after {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #b8b516;
+	transform: scaleX(0);
+	transition: transform 0.3s;
+}
+
+.text_link a:hover::after {
+  transform: scaleX(1);
+}
+
+/*.sec02 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.sec03 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+} */
+
+/*_____________________________________________________________________
+/* footer */
+footer {
+  background: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+/*_____________________________________________________________________
+/* header */
+
+header {
+  width: 100%; 
+  height: 80px; 
+  padding: 30px 0% 5px;
+  background-color: #000000;
+  z-index: 100;
+  /*background-image: url("images/header2.jpg");*/
+  box-sizing: border-box;
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*.border-radius {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  background-color: #000000;
+  /*background-image: url("images/header2.jpg");
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top:-10px;
+  left:0;
+  z-index: 9;
+}*/
+
+.header-inner{
+  max-width: 1200px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 50px;
+  position: fixed; 
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;  position: absolute;
+  top:20px;
+  left:0;
+  z-index: 10;
+}
+
+.toggle-menu-button{
+  display: none;
+}
+
+.header-logo{
+  display: block;
+  width: 170px;
+  text-align: center;
+  z-index: 101;
+}
+
+/*_____________________________________________________________________*/
+
+header h1 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+a.pagetop {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #666;
+  color: #FFF;
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+}
+
+/*_____________________________________________________________________
+/*画像アニメーション*/
+
+/*.expansion {
+  overflow: hidden;
+}*/
+
+.expansion img {
+  width: 100%;
+  transition: transform .5s;
+}
+
+.expansion img:hover {
+  transform: scale(1.1);
+}
+
+
+/* 回転アニメーションの定義 */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotateAnimation1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateAnimation2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(90deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+
+  45% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+
+  70% {
+    transform: rotate(270deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateAnimation3 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-90deg);
+  }
+
+  25% {
+    transform: rotate(-90deg);
+  }
+
+  45% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  70% {
+    transform: rotate(90deg);
+  }
+
+  75% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateAnimation4 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(-90deg);
+  }
+
+  60% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* 回転する要素のスタイル */
+
+.rotate1 {
+  width: 500px;
+  height: 100px;
+  margin: 100px auto;
+  transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
+}
+
+.rotate2 {
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
+}
+.rotate3 {
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
+}
+
+.rotate4 {
+  width: 600px;
+  height: 300px;
+  margin: 100px auto;
+  transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
+}
+
+.rotate5 {
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
+}
+
+.rotate6 {
+  width: 500px;
+  height: 350px;
+  margin: 100px auto;
+  transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
+}
+
+.rotate7 {
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
+}
+
+.rotate8 {
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
+}
+
+.rotate9 {
+  width: 400px;
+  height: 534px;
+  margin: 100px auto;
+  transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
+}
+
+/* ホバー時に回転アニメーションを適用 */
+.rotate1:hover {
+  animation: rotateAnimation1 5s ease-in-out forwards;
+}
+
+.rotate2:hover {
+  animation: rotateAnimation2 7s ease-in-out forwards;
+}
+
+.rotate3:hover {
+  animation: rotateAnimation3 7s ease-in-out forwards;
+}
+
+.rotate6:hover {
+  animation: rotateAnimation1 5s ease-in-out forwards;
+}
+
+.rotate7:hover {
+  animation: rotateAnimation1 5s ease-in-out forwards;
+}
+
+.rotate8:hover {
+  animation: rotateAnimation1 5s ease-in-out forwards;
+}
+
+.rotate9:hover {
+  animation: rotateAnimation4 3s ease-in-out forwards;
+}
+
+/*_____________________________________________________________________
+/*スクロール*/
+
+/* 垂直方向にスケールを変えるキーフレーム */
+@keyframes popup {
+  0% {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1.0);
+  }
+  80%, 100% {
+    opacity: 1;
+  }
+}
+
+.animationElement {
+  /* スクロールアニメーションの設定 */
+  animation: grow-progress linear; 
+  animation: popup cubic-bezier(0.22, 1, 0.36, 1) forwards; /* アニメーションを指定。イージングはlinear */
+  animation-timeline: scroll();
+}
+
+/*_____________________________________________________________________
+/* ここから下がハンバーガーメニューに関するCSS */
+  
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #ffffff;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+}
+
+nav.nav_content {
+  /* display: none; */
+    height: 100vh;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, .5);
+    transition: transform .5s;
+    /* 上部に余白を作って ×（close）アイコンの下に最初の項目が来るようにする */
+    padding-top: 72px; 
+}
+
+#navBtn {
+  display: none;
+}
+
+#drawer_input:checked ~ nav.nav_content {
+  display: block;
+  transform: translateX(-300px);
+}
+
+.open {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #FFF;
+  border-radius: 2px;
+}
+
+/*humburger button*/
+
+.open::before,
+.open::after {
+  content: "";
+}
+
+.open span,
+.open::before,
+.open::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 30%;
+  width: 60%;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  transition: transform .3s;
+}
+
+.open::before {
+  transform: translateY(-8px);
+}
+
+.open::after {
+  transform: translateY(8px);
+}
+
+/*close button*/
+#navBtn:checked + .open span {
+  transform: scaleX(0);
+}
+
+#navBtn:checked + .open::before {
+  transform: rotate(45deg);
+}
+
+#navBtn:checked + .open::after {
+  transform: rotate(-45deg);
+}
+
+#navBtn:checked + .open span,
+#navBtn:checked + .open::before,
+#navBtn:checked + .open::after {
+  border-bottom-color: #EEE;
+}
+
+nav ul {
+  list-style: none;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.nav_item {
+  margin: 50px auto;
+}
+
+nav ul li {
+  /* display: inline-block; */
+  margin: 0 10px;
+  padding: 14px 0; /* 少し広めにして可読性を上げる */
+}
+
+nav.nav_content ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFF;
+}
+
+nav.main-nav ul li a {
+  font-weight: bold;
+}
+
+/* --- サブメニュー（初期非表示 / ホバーまたはタップで表示） --- */
+/* 初期は visibility/opacity/max-height で非表示にしてアニメーション可能にする */
+nav.nav_content .submenu {
+  list-style: none;
+  padding-left: 12px;
+  margin-top: 8px;
+  display: block; /* ブロックにしておく。visibilityで制御 */
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 180ms ease, max-height 260ms ease, visibility 0s linear 260ms;
+}
+nav.nav_content .submenu li { padding: 8px 0; }
+nav.nav_content .submenu li a { color: #ddd; font-size: 14px; }
+
+/* モバイル: .open クラスで開く（script.js が切り替える） */
+nav.nav_content .has-submenu.open > .submenu {
+  visibility: visible;
+  opacity: 1;
+  max-height: 400px; /* 適宜調整 */
+  transition: opacity 180ms ease, max-height 300ms ease;
+}
+
+/* デスクトップではホバーで表示（位置はドロップダウンとして表示） */
+@media (min-width: 800px) {
+  nav.nav_content ul { flex-direction: row; }
+  nav.nav_content .nav_item { border: none; padding: 0 12px; }
+  nav.nav_content .has-submenu { position: relative; }
+  nav.nav_content .submenu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: rgba(0,0,0,0.9);
+    padding: 10px;
+    min-width: 180px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 180ms ease, transform 150ms ease, max-height 260ms ease, visibility 0s linear 260ms;
+  }
+  nav.nav_content .has-submenu:hover > .submenu {
+    visibility: visible;
+    opacity: 1;
+    max-height: 400px;
+  }
+  /* デスクトップではトグルボタンを非表示 */
+  nav.nav_content .submenu-toggle { display: none; }
+}
