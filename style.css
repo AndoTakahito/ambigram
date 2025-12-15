@@ -92,7 +92,7 @@ main {
   margin: 300px auto;
   animation: fadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
   transition: transform 1s ease-in-out; /* ホバー時の変化をスムーズにする */
-  animation: rotateAnimation0 4s ease-in-out forwards;
+  animation: rotateAnimation0 8s ease-in-out forwards;
 }
 
 /*フォント*/
@@ -267,11 +267,17 @@ a.pagetop {
   0% {
     transform: rotate(0deg);
   }
-  50% {
+  40% {
     transform: rotate(0deg);
   }
-  100% {
+  60% {
     transform: rotate(180deg);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(0deg);
   }
 }
 
@@ -374,6 +380,12 @@ a.pagetop {
     transform: rotate(0deg);
   }
 }
+
+/*@keyframes rotateAnimation5 {
+  0%{
+
+  }
+}/*
 
 /* 回転する要素のスタイル */
 
